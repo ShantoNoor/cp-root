@@ -2,10 +2,10 @@
 using namespace std;
 
 #define endl "\n"
-#define ll long long int
+#define ll long long
 
 void solve(int tc) {
-  cout << "hello shanto" << endl;
+
 }
 
 int main() {
@@ -13,9 +13,9 @@ int main() {
   cin.tie(nullptr);
   
   int tc = 1; 
-  // cin >> tc;
-  while(tc--) 
-    solve(tc);
+  cin >> tc;
+  for(int t=1; t<=tc; ++t)
+    solve(t);
 
   return 0;
 }
