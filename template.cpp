@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+
 #define ff first
 #define ss second
 #define endl "\n"
@@ -26,42 +30,40 @@ using namespace std;
 #define onebits(x) __builtin_popcountll(x)
 #define sp(x) fixed<<setprecision(x)
 #define pqb priority_queue<int>
-#define pqs priority_queue \
-	<int, vec(int), greater<int>>
+#define pqs priority_queue<int, vec(int), greater<int>>
 #define i128 __int128
-#define Test cout << "Case " << tc << ": ";
-#define For(tv, s, c, i) for(tv = s; c; i)
+#define Test cout << "Case " << tc << ": "
 #define Fori(v, s, e) for(int v = s; v <= e; ++v)
 #define Forli(v, s, e) for(ll v = s; v <= e; ++v)
 #define Forr(v, s, e) for(int v = s; v >= e; --v)
 #define Forlr(v, s, e) for(ll v = s; v >= e; --v)
-#define FTC0 solve();
-#define FTC1 int tn; cin >> tn; \
-  for(int tc = 1; tc <= tn; ++tc) solve(tc);
 #define FTC2 int t; while(cin >> t && t) solve(t);
-#define FIO \
-  ios_base::sync_with_stdio(false); cin.tie(NULL);
+template <typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 #ifdef DEBUG
-  #include "code_library/debug.h"
+  #include <debug.h>
 #else
   #define deb(args...)
   #define debv(x)
   #define debr(arr, s, e)
   #define TIME
-  #define IOD
 #endif
 
-int solve(int tc = 0) {
-  // cout << "Hello World" << endl;
+int solve(int tc = 1) {
   
+
   return 0;
 }
 
 int main() {
-  FIO
-  IOD
-  FTC0
+  deb("Author Shanto!...")
+  
+  ios_base::sync_with_stdio(false); cin.tie(nullptr);
+  int tn = 1; 
+
+  cin >> tn; 
+
+  for(int tc = 1; tc <= tn; ++tc) solve(tc); 
   TIME
   return 0;
 }

@@ -219,12 +219,7 @@ void __print(istream_iterator<string> it, T a, Args... args) {
   for(int i = s; i <= e; ++i) \
     cerr << #arr << "[" << i << "] = ", \
     cpprint::print(arr[i]); 
-#endif
-
-#define IOD \
-  freopen("/Users/shantonoor/cp-root/input.txt", "r", stdin); \
-  freopen("/Users/shantonoor/cp-root/output.txt", "w", stdout); \
-  freopen("/Users/shantonoor/cp-root/debug.txt", "w", stderr); 
+#endif 
 
 clock_t tStart = clock();
 #define TIME \
