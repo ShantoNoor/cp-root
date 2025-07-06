@@ -1,50 +1,69 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+
+#define ff first
+#define ss second
 #define endl "\n"
+#define mp make_pair
+#define pb push_back
+#define ppb pop_back
+#define ppf pop_front
+#define pf push_front
 #define ll long long
+#define ld long double
+#define ull unsigned ll
+#define sq(x) ((x)*(x))
+#define eb emplace_back
+#define ef emplace_front
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+#define sz(x) (int)x.size()
+#define mem(a) memset(a, 0, sizeof(a))
+#define memn(a) memset(a , -1 ,sizeof(a))
+#define zerobits(x) __builtin_ctzll(x)
+#define onebits(x) __builtin_popcountll(x)
+#define sp(x) fixed<<setprecision(x)
+#define pqb priority_queue<int>
+#define pqs priority_queue<int, vec(int), greater<int>>
+#define i128 __int128
+#define Test cout << "Case " << tc << ": "
+#define Fori(v, s, e) for(int v = s; v <= e; ++v)
+#define Forli(v, s, e) for(ll v = s; v <= e; ++v)
+#define Forr(v, s, e) for(int v = s; v >= e; --v)
+#define Forlr(v, s, e) for(ll v = s; v >= e; --v)
+#define FTC2 int t; while(cin >> t && t) solve(t);
+#define vinp(a) for(auto &x: a) cin >> x;
+template <typename T> using pbds = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template <typename T> using pbdse = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
+#ifdef DEBUG
+  #include <debug.h>
+#else
+  #define deb(args...)
+  #define debv(x)
+  #define debr(arr, s, e)
+  #define TIME
+#endif
 
-void solve(int tc) {
-  int n; cin >> n;
-  vector<vector<char>> a(n, vector<char>(n));
-  for(auto &x: a) {
-    for(auto &y: x) {
-      cin >> y;
-    }
-  }
-  for(int i=0; i < n; ++i) {
-    for(int j = 0; j < n; ++j) {
-      if(a[i][j] == '.' && i > 0 && j > 0 && i < n-1 && j < n-1 && 
-          a[i-1][j] == '.' && a[i+1][j] == '.' &&  a[i][j-1] == '.' && a[i][j+1] == '.') {
-        a[i][j] = 'T';
-        a[i-1][j] = 'T';
-        a[i+1][j] = 'T';
-        a[i][j-1] = 'T';
-        a[i][j+1] = 'T';
-      }
-    }
-  }
+int solve(int tc = 1) {
   
-  for(auto &x: a) {
-    for(auto &y: x) {
-      if(y == '.') {
-        cout << "NO" << endl;
-        return;
-      }
-    }
-  }
-  cout << "YES" << endl;
+
+  return 0;
 }
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
+  deb("Author Shanto!...")
   
-  int tc = 1; 
-  // cin >> tc;
-  for(int t=1; t<=tc; ++t)
-    solve(t);
+  ios_base::sync_with_stdio(false); cin.tie(nullptr);
+  int tn = 1; 
 
+  cin >> tn;
+
+  for(int tc = 1; tc <= tn; ++tc) solve(tc); 
+  TIME
   return 0;
 }
